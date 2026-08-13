@@ -1,0 +1,13 @@
+---
+description: Git commits must use Filippo's Gmail so Vercel attributes deployments
+alwaysApply: true
+---
+
+# Git author
+
+Every commit in this repo must use:
+
+- Name: `Filippo`
+- Email: `cretellafilippo@gmail.com`
+
+Pass those as the author if they are not already set. Do not commit as any other identity. Vercel will not show the deployment otherwise.

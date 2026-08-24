@@ -23,7 +23,7 @@ export async function generateMetadata({
   const post = getPost(slug);
   if (!post) return { title: "Not found" };
 
-  const description = post.excerpt || post.subtitle || post.title;
+  const description = post.subtitle || post.title;
 
   return {
     title: post.title,

@@ -9,7 +9,6 @@ export type Post = {
   subtitle: string;
   date: string;
   category: CategorySlug;
-  excerpt: string;
   featured: boolean;
   tags: string[];
   content: string;
@@ -74,7 +73,6 @@ export function getPost(slug: string): Post | null {
       subtitle: typeof data.subtitle === "string" ? data.subtitle : "",
       date: typeof data.date === "string" ? data.date : new Date().toISOString().slice(0, 10),
       category,
-      excerpt: typeof data.excerpt === "string" ? data.excerpt : "",
       featured: data.featured === true,
       tags,
       content,

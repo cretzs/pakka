@@ -19,7 +19,7 @@ export function GET() {
   const items = posts
     .map((post) => {
       const link = `${origin}/essays/${post.slug}`;
-      const description = escapeXml(post.excerpt || post.content.slice(0, 280));
+      const description = escapeXml(post.subtitle || post.content.slice(0, 280));
       const pubDate = new Date(`${post.date}T00:00:00Z`).toUTCString();
 
       return `    <item>

@@ -6,7 +6,6 @@ import { isCategorySlug, type CategorySlug } from "@/lib/site";
 export type Post = {
   slug: string;
   title: string;
-  subtitle: string;
   date: string;
   category: CategorySlug;
   featured: boolean;
@@ -70,7 +69,6 @@ export function getPost(slug: string): Post | null {
     return {
       slug,
       title: typeof data.title === "string" ? data.title : slug,
-      subtitle: typeof data.subtitle === "string" ? data.subtitle : "",
       date: typeof data.date === "string" ? data.date : new Date().toISOString().slice(0, 10),
       category,
       featured: data.featured === true,

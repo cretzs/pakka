@@ -127,14 +127,6 @@ a.article-title {
   margin: 0.15em 0 1em;
 }
 
-.article-dek {
-  font-size: 1.35rem;
-  font-style: italic;
-  font-weight: 400;
-  line-height: 1.4;
-  margin: 0.4em 0 0.6em;
-}
-
 .article-meta {
   color: var(--muted);
   font-size: 16pt;

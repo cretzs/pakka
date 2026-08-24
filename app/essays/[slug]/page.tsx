@@ -23,7 +23,7 @@ export async function generateMetadata({
   const post = getPost(slug);
   if (!post) return { title: "Not found" };
 
-  const description = post.subtitle || post.title;
+  const description = post.title;
 
   return {
     title: post.title,
@@ -52,7 +52,6 @@ export default async function EssayPage({
   return (
     <article className="article">
       <h1 className="article-title">{post.title}</h1>
-      {post.subtitle ? <p className="article-dek">{post.subtitle}</p> : null}
       <p className="article-meta">
         <time dateTime={post.date}>{post.date}</time>
         {" · "}

@@ -36,7 +36,6 @@ export function PostList({
           <h2 className="article-title">
             <Link href={essayPath(post.slug)}>{post.title}</Link>
           </h2>
-          {post.subtitle ? <p className="article-dek">{post.subtitle}</p> : null}
           <p className="article-date">
             <time dateTime={post.date}>{post.date}</time>
           </p>

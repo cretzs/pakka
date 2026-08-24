@@ -1,9 +1,5 @@
 import { getPosts } from "@/lib/posts";
-
-function siteUrl() {
-  const url = process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000";
-  return url.replace(/\/$/, "");
-}
+import { site, siteUrl } from "@/lib/site";
 
 function escapeXml(value: string) {
   return value
@@ -22,7 +18,7 @@ export function GET() {
 
   const items = posts
     .map((post) => {
-      const link = `${origin}/posts/${post.slug}`;
+      const link = `${origin}/essays/${post.slug}`;
       const description = escapeXml(post.excerpt || post.content.slice(0, 280));
       const pubDate = new Date(`${post.date}T00:00:00Z`).toUTCString();
 
@@ -39,9 +35,9 @@ export function GET() {
   const xml = `<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0">
   <channel>
-    <title>Telos</title>
+    <title>${escapeXml(site.title)}</title>
     <link>${origin}</link>
-    <description>Notes on technology and regulation.</description>
+    <description>${escapeXml(site.description)}</description>
 ${items}
   </channel>
 </rss>

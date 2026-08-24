@@ -1,6 +1,6 @@
-# Telos
+# Pakkā
 
-Notes on technology and regulation. Drop Markdown files in `content/`.
+Notes on AI, risk, governance and human judgment. Drop Markdown files in `content/`.
 
 ## Write
 

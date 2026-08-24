@@ -2,11 +2,11 @@ import Link from "next/link";
 
 export default function NotFound() {
   return (
-    <article className="entry">
-      <h1 className="entry-title">Not found</h1>
-      <p>That post is not here.</p>
+    <article className="article">
+      <h1 className="article-title">Not found</h1>
+      <p>That page is not here.</p>
       <p>
-        <Link href="/">Back to Telos</Link>
+        <Link href="/">Back to Pakkā</Link>
       </p>
     </article>
   );

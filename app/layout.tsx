@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
+import { TellshieldLoader } from "@/components/tellshield";
 import { site, siteUrl } from "@/lib/site";
 import "./globals.css";
 
@@ -50,6 +51,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html lang="en" className={etBook.variable}>
       <body className={etBook.className}>
+        <TellshieldLoader />
         <div className="site">
           <SiteHeader />
           <main>{children}</main>

@@ -61,6 +61,7 @@ export function getPost(slug: string): Post | null {
   try {
     const { data, content } = matter(raw);
     const category = isCategorySlug(data.category) ? data.category : "governance";
+    if (data.published === false) return null;
 
     const tags = Array.isArray(data.tags)
       ? data.tags.filter((tag): tag is string => typeof tag === "string")
